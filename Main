@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+#include <iostream>
+#include <string>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+using namespace std;
 
-# Precompiled Headers
-*.gch
-*.pch
+int main() {
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+   int room = 1;
+   int cash;
 
-# Fortran module files
-*.mod
-*.smod
+   cout << "Welcome to the Chill Corner!\nHow much cash will you start off with?\n";
+   cin >> cash;
+   cout << "Excelent! Lets get started!";
+   while (room != 0) {
+      switch (room) {
+         case 0:
+            cout << "Bye!";
+            break;
+         default:
+            cout << "Where do you want to go?\n0 - Home";
+            cin >> room;
+            break;
+      }
+   }
+   cout << "Final Cash - " << cash}
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+   return 0;
+}
