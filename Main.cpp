@@ -1,28 +1,35 @@
 #include <iostream>
 #include <string>
 
+
 using namespace std;
 
+void DisplayGame(string displayCards[], int size) {
+   int i = 0;
+   for (i = 0, i < size, i++) {
+      cout << "[" << displayCards[i] << "] " << endl;
+      }
+}
+
 int main() {
+   // Declares Variables
+   int health = 10;
+   int cardCount = 5;
+   string action;
+   string cards[cardCount];
+   
+   cout << "Welcome to the Chill Corner, a rouguelike created by ShootingTheBrez!" << endl;
 
-   int room = 1;
-   int cash;
-
-   cout << "Welcome to the Chill Corner!\nHow much cash will you start off with?\n";
-   cin >> cash;
-   cout << "Excelent! Lets get started!";
-   while (room != 0) {
-      switch (room) {
-         case 0:
-            cout << "Bye!";
-            break;
-         default:
-            cout << "Where do you want to go?\n0 - Home";
-            cin >> room;
-            break;
+   while (health > 0) {
+      for (i = 0, i < cardCount, i++) {
+         cards[i] = rand() % 10 + 1;
+         }
+      DisplayGame(cards, cardCount);
+      cin >> action;
+      if (action == "quit") {
+         health = 0;
       }
    }
-   cout << "Final Cash - " << cash}
-
+   
    return 0;
 }
